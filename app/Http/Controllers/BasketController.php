@@ -88,7 +88,6 @@ class BasketController extends Controller
         return redirect()->route('basket.index')->with('success', 'Mahsulot savatchadan olib tashlandi.');
     }
 
-
     public function checkout(Request $request)
     {
         $user = Auth::user();

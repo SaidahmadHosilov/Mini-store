@@ -1,9 +1,9 @@
 <x-app-layout >
     <div class="container mx-auto p-6 max-w-5xl bg-white rounded-lg shadow-md my-5">
-        <h1 class="text-3xl font-bold mb-8 text-center">Sizning savatchingiz</h1>
+        <h1 class="text-3xl font-bold mb-8 text-center">Sizning savatingiz</h1>
 
         @if($basketItems->isEmpty())
-            <p class="text-center text-gray-500 text-lg">Savatchingiz bo'sh.</p>
+            <p class="text-center text-gray-500 text-lg">Savatingiz bo'sh.</p>
         @else
             <form action="{{ route('basket.update') }}" method="POST" class="mb-6">
                 @csrf

@@ -52,7 +52,6 @@
                             <h4 class="text-xl font-bold">{{ $product['name'] ?? 'Product Name' }}</h4>
                             <p class="text-gray-600">{{ $product['description'] ?? 'Product description here.' }}</p>
                             <span class="text-lg font-semibold text-green-500">{{ number_format($product['price'] ?? 0, 2) }} so'm</span>
-                            {{-- <a href="#" class="mt-4 inline-block text-blue-500 hover:text-blue-700">View Details</a> --}}
 
                             <!-- Add to Cart button -->
                             <form action="{{ route('basket.add', $product['id']) }}" method="POST" class="mt-2">

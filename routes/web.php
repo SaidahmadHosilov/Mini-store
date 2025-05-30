@@ -13,7 +13,6 @@ Route::get('/', function () {
 
 
 Route::middleware(['auth'])->group(function () {
-    Route::post('/basket/checkout', [BasketController::class, 'checkout'])->name('basket.checkout');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
     Route::get('/products', [ProductController::class, 'index'])->name('products');
@@ -25,6 +24,7 @@ Route::middleware(['auth'])->group(function () {
 
     /* Basket */
     Route::get('/basket', [BasketController::class, 'getBasket'])->name('basket.index');
+    Route::post('/basket/checkout', [BasketController::class, 'checkout'])->name('basket.checkout');
     Route::post('/basket/{productId}', [BasketController::class, 'addToBasket'])->name('basket.add');
     // Miqdorlarni yangilash
     Route::put('/basket/update', [BasketController::class, 'updateBasket'])->name('basket.update');
